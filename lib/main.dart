@@ -18,12 +18,12 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       //mobx
-      //home: ListAccountsPage(),
+      home: ListBills(),
       //provider
-      home: ChangeNotifierProvider(
+      /*home: ChangeNotifierProvider(
         create: (context) => PaymentController(),
         child: ListBills(),
-      ),
+      ),*/
     );
   }
 }
