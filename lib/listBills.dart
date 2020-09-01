@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fiap_state_manager/mobx/firebaseNotifications.dart';
+import 'package:flutter_fiap_state_manager/fcm/firebaseNotifications.dart';
 import 'package:flutter_fiap_state_manager/provider/paymentProvider.dart';
 import 'package:provider/provider.dart';
 
