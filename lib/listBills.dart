@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fiap_state_manager/mobx/firebaseNotifications.dart';
 import 'package:flutter_fiap_state_manager/provider/paymentProvider.dart';
 import 'package:provider/provider.dart';
 
 class ListBills extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    new FirebaseNotifications(context).setUpFirebase();
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Contas a pagar"),
