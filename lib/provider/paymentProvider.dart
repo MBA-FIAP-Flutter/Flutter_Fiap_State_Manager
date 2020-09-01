@@ -3,6 +3,7 @@ import 'dart:collection';
 import 'package:flutter/material.dart';
 import 'package:flutter_fiap_state_manager/model/payment.dart';
 
+//singleton
 class PaymentController extends ChangeNotifier {
   final List<Payment> _payments = [];
 
