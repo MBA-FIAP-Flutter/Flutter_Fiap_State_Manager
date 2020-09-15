@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fiap_state_manager/listBills.dart';
-import 'package:flutter_fiap_state_manager/provider/paymentProvider.dart';
+import 'package:flutter_fiap_state_manager/mobx/paymentController.dart';
+import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
+  GetIt.I.registerSingleton<PaymentController>(PaymentController());
   runApp(MyApp());
 }
 

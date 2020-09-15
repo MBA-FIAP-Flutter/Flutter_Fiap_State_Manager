@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_fiap_state_manager/model/payment.dart';
 
 //singleton
-class PaymentController extends ChangeNotifier {
+class PaymentControllerProvider extends ChangeNotifier {
   final List<Payment> _payments = [];
 
   UnmodifiableListView<Payment> get items => UnmodifiableListView(_payments);

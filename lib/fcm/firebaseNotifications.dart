@@ -2,17 +2,20 @@ import 'dart:io';
 
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_fiap_state_manager/mobx/paymentController.dart';
 import 'package:flutter_fiap_state_manager/model/payment.dart';
-import 'package:flutter_fiap_state_manager/provider/paymentProvider.dart';
+import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 
 class FirebaseNotifications {
   FirebaseMessaging _firebaseMessaging;
   PaymentController controller;
 
-  FirebaseNotifications(BuildContext context){
-    //fazendo uso do changenotifier somente no modo edição
-    controller = Provider.of<PaymentController>(context, listen: false);
+  FirebaseNotifications(){
+    controller = GetIt.I.get<PaymentController>();
+    // provider
+    // fazendo uso do changenotifier somente no modo edição
+    //controller = Provider.of<PaymentController>(context, listen: false);
   }
 
   void setUpFirebase() {

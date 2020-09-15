@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_fiap_state_manager/fcm/firebaseNotifications.dart';
 import 'package:flutter_fiap_state_manager/mobx/paymentController.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 
 class ListBills extends StatelessWidget {
@@ -9,12 +10,12 @@ class ListBills extends StatelessWidget {
   PaymentController paymentController;
 
   ListBills(){
-    paymentController = PaymentController();
+    paymentController = GetIt.I.get<PaymentController>();
   }
 
   @override
   Widget build(BuildContext context) {
-    new FirebaseNotifications(context).setUpFirebase();
+    new FirebaseNotifications().setUpFirebase();
 
     return Scaffold(
       appBar: AppBar(
